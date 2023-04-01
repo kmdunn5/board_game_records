@@ -13,7 +13,7 @@ gem "sqlite3", "~> 1.4"
 gem "puma", "~> 5.0"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-# gem "jbuilder"
+gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -46,3 +46,9 @@ group :development do
   # gem "spring"
 end
 
+
+gem "rspec", "~> 3.12"
+
+gem "devise", "~> 4.9"
+
+gem "rack-cors", :require => 'rack/cors'
