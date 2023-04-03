@@ -1,33 +1,29 @@
 class GamesController < ApplicationController
-  before_action :set_game, only: [:show, :edit, :update]
+  before_action :set_game, only: [:show, :edit, :update, :destroy]
 
   def index
-    format.json { render json: Game.all }
+    @games = Game.all
+    render json: @games
   end
   
   def show
-    format.json { render json: @game }
+    render json: @game
   end
 
-  # def new
-  #   format.json { render json: @game }
-  # end
+  def create
+    @game = Game.create(games_params)
+    render json: tdlist
+  end
 
-  # def create
-  #   format.json { render json: @game }
-  # end
+  def update
+    @game.update(game_param)
+    render json: @game
+  end
 
-  # def edit
-  #   format.json { render json: @game }
-  # end
-
-  # def update
-  #   format.json { render json: @game }
-  # end
-
-  # def delete
-  #   format.json { render json: @game }
-  # end
+  def destroy
+    @game.destroy
+    head :no_content, status: :ok
+  end
 
   private
 
@@ -36,6 +32,6 @@ class GamesController < ApplicationController
   end
 
   def games_params
-    params.require(:game).permit(:name, ,:description, :rating)
+    params.require(:game).permit(:name, :description, :rating)
   end
 end
