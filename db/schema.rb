@@ -14,11 +14,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_06_211912) do
   create_table "games", force: :cascade do |t|
     t.string "name", null: false
     t.string "description"
-    t.string "rating"
+    t.decimal "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "min_players"
     t.integer "max_players"
+    t.string "category"
   end
 
   create_table "users", force: :cascade do |t|
