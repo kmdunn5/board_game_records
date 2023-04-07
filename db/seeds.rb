@@ -1,6 +1,5 @@
-Game.destroy_all
 
-game_data = [
+games_data = [
   {
     name: "Return to Darktower",
     description: "Work together to stop the rise of the Archvillian",
@@ -51,6 +50,8 @@ game_data = [
   }
 ]
 
-game_data.each do |game|
-  Game.create!(game)
+games_data.each do |game|
+  Game.create_with(game).find_or_create_by!(name: game[:name])
 end
+
+
