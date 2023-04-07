@@ -1,3 +1,4 @@
+Game.destroy_all
 
 game_data = [
   {
