@@ -1,57 +1,32 @@
 
-games_data = [
+pets_data = [
   {
-    name: "Return to Darktower",
-    description: "Work together to stop the rise of the Archvillian",
-    category: "Collaborative Strategy", 
-    min_players: 2,
-    max_players: 4,
-    rating: 9
+    name: "Zuko",
+    species: "Dog",
+    gender: "Male",
+    date_of_birth: "07/13/2021",
+    fixed: true
   },
   {
-    name: "Frosthaven",
-    description: "World exploration and dungeon crawling",
-    category: "Strategy/RPG",
-    min_players: 2,
-    max_players: 4,
-    rating: 10
+    name: "Fiona",
+    species: "Cat",
+    gender: "Female",
+    fixed: true
   },
   {
-    name: "Root",
-    description: "Super cute animal factions battle for forest supremacy",
-    category: "Strategy",
-    min_players: 2,
-    max_players: 4,
-    rating: 10
+    name: "Puck",
+    species: "Cat",
+    gender: "Female",
+    fixed: true
   },
   {
-    name: "Kill Team",
-    description: "Small faction battles",
-    category: "Strategy",
-    min_players: 2,
-    max_players: 0,
-    rating: 8
-  },
-  {
-    name: "Hanabi",
-    description: "Collaborative fireworks display card game",
-    category: "Collaborative Strategy",
-    min_players: 2,
-    max_players: 4,
-    rating: 10
-  },
-  {
-    name: "Lost Cities",
-    description: "Send expeditions into ancient ruins",
-    category: "Strategy",
-    min_players: 2,
-    max_players: 0,
-    rating: 8
+    name: "Chance",
+    species: "Dog",
+    gender: "Male",
+    fixed: false
   }
 ]
 
-games_data.each do |game|
-  Game.create_with(game).find_or_create_by!(name: game[:name])
+pets_data.each do |pet|
+  Pet.create_with(pet).find_or_create_by!(name: pet[:name])
 end
-
-

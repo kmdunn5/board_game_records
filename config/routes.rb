@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   scope '/api/v1' do
-    resources :games
+    resources :pets
   end
 
   devise_for :users
@@ -9,3 +9,4 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 end
+ 
