@@ -52,3 +52,5 @@ gem "rspec", "~> 3.12"
 gem "devise", "~> 4.9"
 
 gem "rack-cors", :require => 'rack/cors'
+
+gem 'graphql'
